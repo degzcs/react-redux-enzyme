@@ -3,19 +3,19 @@ import * as buildingApi from "../../api/buildingApi";
 import { beginApiCall, apiCallError } from "./apiStatusActions";
 
 export function loadBuildingSuccess(buildings) {
-  return { type: types.LOAD_COURSES_SUCCESS, buildings };
+  return { type: types.LOAD_BUILDINGS_SUCCESS, buildings };
 }
 
 export function createBuildingSuccess(building) {
-  return { type: types.CREATE_COURSE_SUCCESS, building };
+  return { type: types.CREATE_BUILDING_SUCCESS, building };
 }
 
 export function updateBuildingSuccess(building) {
-  return { type: types.UPDATE_COURSE_SUCCESS, building };
+  return { type: types.UPDATE_BUILDING_SUCCESS, building };
 }
 
 export function deleteBuildingOptimistic(building) {
-  return { type: types.DELETE_COURSE_OPTIMISTIC, building };
+  return { type: types.DELETE_BUILDING_OPTIMISTIC, building };
 }
 
 export function loadBuildings() {

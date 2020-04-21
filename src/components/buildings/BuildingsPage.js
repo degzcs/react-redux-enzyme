@@ -68,7 +68,7 @@ BuildingsPage.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    buildings,
+    buildings: state.buildings,
     loading: state.apiCallsInProgress > 0
   };
 }
