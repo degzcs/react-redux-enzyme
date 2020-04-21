@@ -1,5 +1,5 @@
 {
-  "name": "deskview",
+  "name": "DummyApp",
   "description": "React and Redux Deskview FE",
   "scripts": {
     "start": "run-p start:dev start:api",
