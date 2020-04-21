@@ -5,15 +5,15 @@ it("should add building when passed CREATE_BUILDING_SUCCESS", () => {
   // arrange
   const initialState = [
     {
-      address: "A"
+      name: "A"
     },
     {
-      address: "B"
+      name: "B"
     }
   ];
 
   const newBuilding = {
-    address: "C"
+    name: "C"
   };
 
   const action = actions.createBuildingSuccess(newBuilding);
@@ -23,20 +23,20 @@ it("should add building when passed CREATE_BUILDING_SUCCESS", () => {
 
   // assert
   expect(newState.length).toEqual(3);
-  expect(newState[0].address).toEqual("A");
-  expect(newState[1].address).toEqual("B");
-  expect(newState[2].address).toEqual("C");
+  expect(newState[0].name).toEqual("A");
+  expect(newState[1].name).toEqual("B");
+  expect(newState[2].name).toEqual("C");
 });
 
 it("should update building when passed UPDATE_BUILDING_SUCCESS", () => {
   // arrange
   const initialState = [
-    { id: 1, address: "A" },
-    { id: 2, address: "B" },
-    { id: 3, address: "C" }
+    { id: 1, name: "A" },
+    { id: 2, name: "B" },
+    { id: 3, name: "C" }
   ];
 
-  const building = { id: 2, address: "New Address" };
+  const building = { id: 2, name: "New Name" };
   const action = actions.updateBuildingSuccess(building);
 
   // act
@@ -45,7 +45,7 @@ it("should update building when passed UPDATE_BUILDING_SUCCESS", () => {
   const untouchedBuilding = newState.find(a => a.id == 1);
 
   // assert
-  expect(updatedBuilding.address).toEqual("New Address");
-  expect(untouchedBuilding.address).toEqual("A");
+  expect(updatedBuilding.name).toEqual("New Name");
+  expect(untouchedBuilding.name).toEqual("A");
   expect(newState.length).toEqual(3);
 });

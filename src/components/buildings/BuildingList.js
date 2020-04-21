@@ -7,7 +7,7 @@ const BuildingList = ({ buildings, onDeleteClick }) => (
     <thead>
       <tr>
         <th />
-        <th>Address</th>
+        <th>Name</th>
         <th />
       </tr>
     </thead>
@@ -16,7 +16,7 @@ const BuildingList = ({ buildings, onDeleteClick }) => (
         return (
           <tr key={building.id}>
             <td>
-              <Link to={"/building/" + building.id}>{building.address}</Link>
+              <Link to={"/building/" + building.id}>{building.name}</Link>
             </td>
             <td>
               <button

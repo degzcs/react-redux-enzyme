@@ -19,11 +19,11 @@ const BuildingForm = ({
         </div>
       )}
       <TextInput
-        name="address"
-        label="Address"
-        value={building.address}
+        name="name"
+        label="Name"
+        value={building.name}
         onChange={onChange}
-        error={errors.address}
+        error={errors.name}
       />
 
       <button type="submit" disabled={saving} className="btn btn-primary">

@@ -1,18 +1,18 @@
 const buildings = [
   {
     id: 1,
-    address: "Calle 44 # 123",
+    name: "Aguacatala",
   },
   {
     id: 2,
-    address: "Calle 37 # 98",
+    name: "Milla de Oro",
   },
 ];
 
 const desktops= [ ];
 const newBuilding= {
   id: null,
-  address: 'Carrera 1'
+  name: ''
 };
 
 // Using CommonJS style export so we can consume via Node (without using Babel-node)

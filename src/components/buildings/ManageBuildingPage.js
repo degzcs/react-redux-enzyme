@@ -32,15 +32,15 @@ export function ManageBuildingPage({
     const { name, value } = event.target;
     setBuilding(prevBuilding => ({
       ...prevBuilding,
-      [name]: name === "id" ? parseInt(value, 10) : value // address?
+      [name]: name === "id" ? parseInt(value, 10) : value // name?
     }));
   }
 
   function formIsValid() {
-    const { address } = building;
+    const { name } = building;
     const errors = {};
 
-    if (!address) errors.title = "Address is required.";
+    if (!name) errors.name = "Name is required.";
 
     setErrors(errors);
     // Form is valid if the errors object still has no properties

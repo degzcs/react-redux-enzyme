@@ -46,7 +46,7 @@ server.post("/buildings/", function(req, res, next) {
   if (error) {
     res.status(400).send(error);
   } else {
-    req.body.slug = createSlug(req.body.address); // Generate a slug for new courses.
+    req.body.slug = createSlug(req.body.name); // Generate a slug for new courses.
     next();
   }
 });
@@ -71,6 +71,6 @@ function createSlug(value) {
 }
 
 function validateBuilding(building) {
-  if (!building.address) return "Address is required.";
+  if (!building.name) return "Name is required.";
   return "";
 }
