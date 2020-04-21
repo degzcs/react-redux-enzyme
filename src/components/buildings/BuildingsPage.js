@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import * as buildingActions from "../../redux/actions/buildingActions";
-import * as authorActions from "../../redux/actions/authorActions";
 import PropTypes from "prop-types";
 import { bindActionCreators } from "redux";
 import BuildingList from "./BuildingList";
@@ -15,17 +14,11 @@ class BuildingsPage extends React.Component {
   };
 
   componentDidMount() {
-    const { buildings, authors, actions } = this.props;
+    const { buildings, actions } = this.props;
 
     if (buildings.length === 0) {
       actions.loadBuildings().catch(error => {
         alert("Loading buildings failed" + error);
-      });
-    }
-
-    if (authors.length === 0) {
-      actions.loadAuthors().catch(error => {
-        alert("Loading authors failed" + error);
       });
     }
   }
@@ -75,7 +68,7 @@ BuildingsPage.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    buildings:
+    buildings,
     loading: state.apiCallsInProgress > 0
   };
 }
@@ -84,7 +77,6 @@ function mapDispatchToProps(dispatch) {
   return {
     actions: {
       loadBuildings: bindActionCreators(buildingActions.loadBuildings, dispatch),
-      loadAuthors: bindActionCreators(authorActions.loadAuthors, dispatch),
       deleteBuilding: bindActionCreators(buildingActions.deleteBuilding, dispatch)
     }
   };

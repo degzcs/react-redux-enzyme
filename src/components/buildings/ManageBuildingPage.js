@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { loadBuildings, saveBuilding } from "../../redux/actions/buildingActions";
-import { loadAuthors } from "../../redux/actions/authorActions";
 import PropTypes from "prop-types";
 import BuildingForm from "./BuildingForm";
 import { newBuilding } from "../../../tools/mockData";
