@@ -1,7 +1,7 @@
+# React-Redux-Jest-Enzyme
 
-# Deskview
+Project for testing new tecnoligies like React, Redux, Jest and Enzyme
 
-The main target of this project is to map the location of the developers in the office, matching desktop, floor, and name and make easier to find them.
 
 ## Steps to use this application
 
